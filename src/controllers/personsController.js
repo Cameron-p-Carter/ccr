@@ -1,14 +1,19 @@
 import PERSONS_DATA from '../data/persons.js';
-import createListTemplate from '../views/list.js';
+import createPersonTemplate from '../views/person.js';
 
+let currentIndex = 0; // To track the currently displayed person
 
-export const getAllPersons = (req, res) => {
-  res.send(createListTemplate(PERSONS_DATA));
+export const getFirstPerson = (req, res) => {
+  currentIndex = 0; // Reset to the first person
+  res.send(createPersonTemplate(PERSONS_DATA[currentIndex]));
 };
 
-export const getPersonById = (req, res) => {
-  const person = PERSONS_DATA.find(b => b.id === req.params.id);
-  res.send(createPersonTemplate(person));
+export const getNextPerson = (req, res) => {
+  currentIndex = (currentIndex + 1) % PERSONS_DATA.length; // Move to the next person
+  res.send(createPersonTemplate(PERSONS_DATA[currentIndex]));
 };
 
-
+export const getPreviousPerson = (req, res) => {
+  currentIndex = (currentIndex - 1 + PERSONS_DATA.length) % PERSONS_DATA.length; // Move to the previous person
+  res.send(createPersonTemplate(PERSONS_DATA[currentIndex]));
+};
