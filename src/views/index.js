@@ -29,7 +29,6 @@ const createHomepageTemplate = () => /*html*/`
           grid-template-rows: 1fr 12fr 3fr; /* rows sizing */
           height: 100%; /* fill the whole height */
           width: 100%; /* fill the whole width */
-          border: 2px solid black; /* grid container border */
           overflow: hidden; /* content doesnt overflow outside container */
         }
 
