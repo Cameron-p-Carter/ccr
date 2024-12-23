@@ -22,10 +22,10 @@ const createHomepageTemplate = () => /*html*/`
         .container {
           display: grid;
           grid-template-areas:
-            "header1 header2 header3 header4"
-            "menu menu content content"
-            "footer1 footer1 footer2 footer3";
-          grid-template-columns: 6fr 4fr 3fr 3fr; /* coloumns sizing*/
+            "header1 header2 header3 header4 header5 header6"
+            "menu menu menu content content content"
+            "footer1 footer1 footer1 footer2 footer2 footer3";
+          grid-template-columns: 6fr 2fr 2fr 1.5fr 1.5fr 3fr; /* coloumns sizing*/
           grid-template-rows: 1fr 12fr 3fr; /* rows sizing */
           height: 100%; /* fill the whole height */
           width: 100%; /* fill the whole width */
@@ -47,25 +47,42 @@ const createHomepageTemplate = () => /*html*/`
 
         .container > div.header2 {
           grid-area: header2;
-          text-align: center;
+          text-align: right;
+          border-right: 1px #f0f0f0;
           padding: 20px;
           background-color: #f0f0f0; 
         }
 
         .container > div.header3 {
           grid-area: header3;
-          text-align: center;
+          text-align: left;
+          border-left: 1px #f0f0f0;
           padding: 20px;
           background-color: #f0f0f0; 
         }
 
         .container > div.header4 {
           grid-area: header4;
-          text-align: center;
+          text-align: right;
+          border-right: 1px #f0f0f0;
           padding: 20px;
           background-color: #f0f0f0; 
         }
 
+        .container > div.header5 {
+          grid-area: header5;
+          text-align: left;
+          border-left: 1px #f0f0f0;
+          padding: 20px;
+          background-color: #f0f0f0; 
+        }
+
+        .container > div.header6 {
+          grid-area: header6;
+          text-align: center;
+          padding: 20px;
+          background-color: #f0f0f0; 
+        }
 
         .container > div.menu {
           grid-area: menu;
@@ -138,12 +155,28 @@ const createHomepageTemplate = () => /*html*/`
         <div class="header3">
           <header>
             <div>
-              <div>G L</div>
+              <div>PROJECTS</div>
             </div>
           </header>
         </div>
 
         <div class="header4">
+          <header>
+            <div>
+              <div>G</div>
+            </div>
+          </header>
+        </div>
+
+        <div class="header5">
+          <header>
+            <div>
+              <div>L</div>
+            </div>
+          </header>
+        </div>
+
+        <div class="header6">
           <header>
             <div>
               <div>CONTACT</div>
