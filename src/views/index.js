@@ -130,8 +130,12 @@ const createHomepageTemplate = () => /*html*/`
         }
 
         .navigation button {
-          margin: 0 10px;
-        }
+          all: unset; /* removes all default styles */
+          font-size: 100px;
+          cursor: pointer; /* still looks clickable */
+          padding: 5px;
+          text-align: center;
+}
       </style>
     </head>
     <body>
