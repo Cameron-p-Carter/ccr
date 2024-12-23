@@ -42,51 +42,44 @@ const createHomepageTemplate = () => /*html*/`
           grid-area: header1;
           text-align: left;
           padding: 20px;
-          background-color: #f0f0f0;
         }
 
         .container > div.header2 {
           grid-area: header2;
           text-align: right;
-          border-right: 1px #f0f0f0;
+          border-right: 1px #FFFFFF;
           padding: 20px;
-          background-color: #f0f0f0; 
         }
 
         .container > div.header3 {
           grid-area: header3;
           text-align: left;
-          border-left: 1px #f0f0f0;
+          border-left: 1px #FFFFFF;
           padding: 20px;
-          background-color: #f0f0f0; 
         }
 
         .container > div.header4 {
           grid-area: header4;
           text-align: right;
-          border-right: 1px #f0f0f0;
+          border-right: 1px #FFFFFF;
           padding: 20px;
-          background-color: #f0f0f0; 
         }
 
         .container > div.header5 {
           grid-area: header5;
           text-align: left;
-          border-left: 1px #f0f0f0;
+          border-left: 1px #FFFFFF;
           padding: 20px;
-          background-color: #f0f0f0; 
         }
 
         .container > div.header6 {
           grid-area: header6;
           text-align: center;
           padding: 20px;
-          background-color: #f0f0f0; 
         }
 
         .container > div.menu {
           grid-area: menu;
-          background-color: #f0f0f0;
           padding: 20px;
         }
 
