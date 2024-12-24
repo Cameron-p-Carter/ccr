@@ -189,11 +189,13 @@ const createHomepageTemplate = () => /*html*/`
 
         <!-- about you here -->
         <div class="content">
-          <div class="person-display" 
+          <div>
+          <div class="person-major-display" 
                hx-get="/persons/first" 
                hx-trigger="load" 
-               hx-target=".person-display">
+               hx-target=".person-major-display">
             <!-- single persons data -->
+          </div>
           </div>
         </div>
 
@@ -202,7 +204,12 @@ const createHomepageTemplate = () => /*html*/`
           <footer>
             <div class="footer-content">
                 <!-- hard code for now -->
-              <div>CAMERON</div>
+                <div class="person-name-display" 
+               hx-get="/persons/first" 
+               hx-trigger="load" 
+               hx-target=".person-name-display">
+            <!-- single persons data -->
+          </div>
             </div>
           </footer>
         </div>
@@ -211,7 +218,7 @@ const createHomepageTemplate = () => /*html*/`
           <footer>
             <div class="footer-content">
               <div class="navigation">
-                <button hx-get="/persons/previous" hx-target=".person-display"><</button>
+                <button hx-get="/persons/previous" hx-target=".person-name-display"><</button>
               </div>
             </div>
           </footer>
@@ -221,7 +228,7 @@ const createHomepageTemplate = () => /*html*/`
           <footer>
             <div class="footer-content">
               <div class="navigation">
-                <button hx-get="/persons/next" hx-target=".person-display">></button>
+                <button hx-get="/persons/next" hx-target=".person-name-display">></button>
               </div>
             </div>
           </footer>
